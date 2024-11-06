@@ -20,7 +20,7 @@ header{
 
 .row{
     background-color:grey;
-    margin:1em;
+    margin:0em;
     width:auto;
     height:auto;
 }
@@ -30,16 +30,62 @@ header{
     width:24%;
     font-size: auto;
     font-weight: 990;
-    border: 10px solid black;
     border-radius: 5px;
     display:inline-block;
 }
+.calculationArea{
+    height: auto;
+    width:49%;
+    font-size: auto;
+    font-weight: 990;
+    border-radius: 5px;
+    text-align: center;
+    display:inline-block;
+    border: 10ch;
+}
+
 
 /*https://www.w3schools.com/css/tryit.asp?filename=trycss_website_layout_blog*/
+@media screen and (min-width: 400px) {
+
+    .row{
+        width:auto;
+        height:7em;
+    }
+    .button {
+        height: inherit;
+        width:24%;
+        font-size: auto;
+    }
+
+    .calculationArea{
+        width:42%;
+        padding:0px,0px,10px,0px;
+        height: 2.9em;
+    }
+   }
+
+
+@media screen and (min-width: 500px) {
+    .row{
+        width:auto;
+        height:7em;
+    }
+   .calculationArea{
+        width:45%;
+        height: 3em;
+    }
+  }
+
 @media screen and (min-width: 600px) {
     .button {   
         height: 100px;
     }
+    .calculationArea{
+        width:45%;
+        height:3em;
+    }
+
   }
 
   @media screen and (min-width: 680px) {
@@ -53,14 +99,13 @@ header{
     .button {   
         height: 120px;
         font-size: 30px;
-
-
     }
   }
 
   @media screen and (min-width: 1500px) {
     .button {   
-        height: 200px;
-        font-size: 49px;
+        height: 120px;
+        font-size: 30px;
     }
   }
+
