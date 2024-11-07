@@ -44,8 +44,17 @@ document.getElementById("clear").onclick = function(){
     calculationArea = document.getElementById("calculationArea").innerHTML = 0;
 }
 document.getElementById("backspace").onclick = function(){
-    //If calculationArea is greater than 0, remove the latest digit
-    calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+    let backSpaceCheck = document.getElementById("calculationArea").value;
+    (backSpaceCheck).toString().length;
+    //If calculationArea is length is 1 && greater than 0 , make it zero
+    if (backSpaceCheck == 1 || backSpaceCheck == 0 ){
+        calculationArea = document.getElementById("calculationArea").innerHTML = 0;
+    }      
+    //If calculationArea is length is greater than 1, remove the last digit
+    if (backSpaceCheck >= 1 ){
+        calculationArea = document.getElementById("calculationArea").innerHTML = 1
+    }      
+
 }
 document.getElementById("*").onclick = function(){
     calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
