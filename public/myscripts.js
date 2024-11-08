@@ -19,11 +19,11 @@ let calculationArea = 0;
 let buttonClear = document.getElementById("clear");
 let buttonBackspace = document.getElementById("backspace");
 let buttonMultiply = document.getElementById("*").value = false;
-let buttonMinus = document.getElementById("-").value = false;;
+let buttonMinus = document.getElementById("-").value = false;
 let buttonPlus = document.getElementById("+").value = false;;
-let buttonDecimal = document.getElementById(".").value = false;;
-let buttonDivide = document.getElementById("/").value = false;;
-let buttonEqual = document.getElementById("=").value = false;;
+let buttonDecimal = document.getElementById(".").value = false;
+let buttonDivide = document.getElementById("/").value = false;
+let buttonEqual = document.getElementById("=").value = false;
 
 //Number buttons
 let buttonNine = document.getElementById("9").value;
@@ -44,16 +44,26 @@ document.getElementById("clear").onclick = function(){
     calculationArea = document.getElementById("calculationArea").innerHTML = 0;
 }
 document.getElementById("backspace").onclick = function(){
-    let backSpaceCheck = document.getElementById("calculationArea").value;
-    (backSpaceCheck).toString().length;
-    //If calculationArea is length is 1 && greater than 0 , make it zero
-    if (backSpaceCheck == 1 || backSpaceCheck == 0 ){
-        calculationArea = document.getElementById("calculationArea").innerHTML = 0;
-    }      
-    //If calculationArea is length is greater than 1, remove the last digit
-    if (backSpaceCheck >= 1 ){
-        calculationArea = document.getElementById("calculationArea").innerHTML = 1
-    }      
+
+    try {
+        let backSpaceConvertToString = document.getElementById("calculationArea").value;
+        backSpaceConvertToString.toString();
+        let backSpaceCheck = backSpaceConvertToString.length;
+        //If calculationArea is length is 1 && greater than 0 , make it zero
+        if (backSpaceCheck == 1 || backSpaceCheck == 0 ){
+            calculationArea = document.getElementById("calculationArea").innerHTML = 0;
+        }      
+        //If calculationArea is length is greater than 1, remove the last digit
+        if (backSpaceCheck >= 1 ){
+            // Need to find the value in calculationArea, find the last digit in that value: https://coreui.io/blog/how-to-remove-the-last-character-from-a-string-in-javascript/
+            let tempBackSpace = document.getElementById("calculationArea").value;
+            calculationArea = document.getElementById("calculationArea").innerHTML = backSpaceCheck.slice(0,-1);
+        }      
+    }
+    catch(err) {
+        console.error(err);
+    }
+
 
 }
 document.getElementById("*").onclick = function(){
