@@ -57,7 +57,7 @@ document.getElementById("backspace").onclick = function(){
         if (backSpaceCheck >= 1 ){
             // Need to find the value in calculationArea, find the last digit in that value: https://coreui.io/blog/how-to-remove-the-last-character-from-a-string-in-javascript/
             let tempBackSpace = document.getElementById("calculationArea").value;
-            calculationArea = document.getElementById("calculationArea").innerHTML = backSpaceCheck.slice(0,-1);
+            calculationArea = document.getElementById("calculationArea").innerHTML = backSpaceConvertToString.slice(0,-1);
         }      
     }
     catch(err) {
