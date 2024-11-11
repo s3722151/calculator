@@ -40,13 +40,19 @@ let buttonOne = document.getElementById("1").value;
 
 //When the user clicks on the button 
 document.getElementById("clear").onclick = function(){
+    try {
     //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_innerhtml_p
     calculationArea = document.getElementById("calculationArea").innerHTML = 0;
+    }
+    catch(error) {
+        console.error(error);
+    }
 }
+//When the user clicks on backspace
 document.getElementById("backspace").onclick = function(){
 
     try {
-        let backSpaceInitialValue = document.getElementById("calculationArea").value;
+        let backSpaceInitialValue = document.getElementById("calculationArea").innerHTML;
         console.log("The value of backSpaceInitialValue:" + backSpaceInitialValue);
         let backSpaceConvertToString = backSpaceInitialValue.toString();        
         let backSpaceCheck = backSpaceConvertToString.length;
@@ -68,33 +74,70 @@ document.getElementById("backspace").onclick = function(){
         console.error(error);
     }
 
-
 }
 document.getElementById("*").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+    try {
+        calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+    }
+    catch(error) {
+        console.error(error);
+    }
+    
 }
 document.getElementById("-").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+    try{
+        calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+
+    }
+    catch(error) {
+        console.error(error);
+    }
 }
 document.getElementById("+").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+    try{
+        calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+    }    
+    catch(error) {
+        console.error(error);
+    }
 }
 document.getElementById(".").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+    try{
+        calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+    }    
+    catch(error) {
+        console.error(error);
+    }
 }
 document.getElementById("/").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+    try{
+        calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+    }    
+    catch(error) {
+        console.error(error);
+    }
 }
 document.getElementById("=").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+    try{
+        calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+    }
+    catch(error) {
+        console.error(error);
+    }
 }
 
 
 document.getElementById("9").onclick = function(){
+    try{
     //IF some value is true, need to add to it 
-    calculationArea = document.getElementById("calculationArea").innerHTML.value = buttonNine;
+    calculationArea = document.getElementById("calculationArea").innerHTML = buttonNine;
     console.log("When the user clicks 9: " + calculationArea);
     console.log("The datatype is: " + typeof calculationArea);
+    }
+    catch(error) {
+        console.error(error);
+    }
+
 }
 document.getElementById("8").onclick = function(){
     calculationArea = document.getElementById("calculationArea").innerHTML = buttonEight;
