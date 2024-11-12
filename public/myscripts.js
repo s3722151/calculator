@@ -140,47 +140,106 @@ document.getElementById("9").onclick = function(){
 
 }
 document.getElementById("8").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = buttonEight;
-    console.log("When the user clicks 8: " + calculationArea);
-    console.log("The datatype is: " + typeof calculationArea);
+    try {
+        calculationArea = document.getElementById("calculationArea").innerHTML = buttonEight;
+        console.log("When the user clicks 8: " + calculationArea);
+        console.log("The datatype is: " + typeof calculationArea);
+    }
+    catch(error) {
+        console.error(error);
+    }
+
 }
 document.getElementById("7").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = buttonSeven;
-    console.log("When the user clicks 7: " + calculationArea);
-    console.log("The datatype is: " + typeof calculationArea);
+    try {
+        calculationArea = document.getElementById("calculationArea").innerHTML = buttonSeven;
+        console.log("When the user clicks 7: " + calculationArea);
+        console.log("The datatype is: " + typeof calculationArea);
+    }
+    catch(error) {
+        console.error(error);
+    }
+
 }
 document.getElementById("6").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = buttonSix;
-    console.log("When the user clicks 6: " + calculationArea);
-    console.log("The datatype is: " + typeof calculationArea);
+    try {
+        calculationArea = document.getElementById("calculationArea").innerHTML = buttonSix;
+        console.log("When the user clicks 6: " + calculationArea);
+        console.log("The datatype is: " + typeof calculationArea);        
+    }
+    catch(error) {
+        console.error(error);
+    }
+
 }
 document.getElementById("5").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = buttonFive;
-    console.log("When the user clicks 5: " + calculationArea);
-    console.log("The datatype is: " + typeof calculationArea);
+    try{
+        calculationArea = document.getElementById("calculationArea").innerHTML = buttonFive;
+        console.log("When the user clicks 5: " + calculationArea);
+        console.log("The datatype is: " + typeof calculationArea);
+    }
+    catch(error) {
+        console.error(error);
+    }
+
 }
 document.getElementById("4").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = buttonFour;
-    console.log("When the user clicks 4: " + calculationArea);
-    console.log("The datatype is: " + typeof calculationArea);
+    try {
+        calculationArea = document.getElementById("calculationArea").innerHTML = buttonFour;
+        console.log("When the user clicks 4: " + calculationArea);
+        console.log("The datatype is: " + typeof calculationArea);
+    }
+    catch(error) {
+        console.error(error);
+    }
+    
+
 }
 document.getElementById("3").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = buttonThree;
-    console.log("When the user clicks 3: " + calculationArea);
-    console.log("The datatype is: " + typeof calculationArea);
+    try{
+        calculationArea = document.getElementById("calculationArea").innerHTML = buttonThree;
+        console.log("When the user clicks 3: " + calculationArea);
+        console.log("The datatype is: " + typeof calculationArea);
+    }
+    catch(error) {
+        console.error(error);
+    }
+    
+
 }
 document.getElementById("2").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = buttonTwo;
-    console.log("When the user clicks 2: " + calculationArea);
-    console.log("The datatype is: " + typeof calculationArea);
+    try{
+        calculationArea = document.getElementById("calculationArea").innerHTML = buttonTwo;
+        console.log("When the user clicks 2: " + calculationArea);
+        console.log("The datatype is: " + typeof calculationArea);
+    }
+    catch(error) {
+        console.error(error);
+    }
+    
+
 }
 document.getElementById("1").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = buttonOne;
-    console.log("When the user clicks 1: " + calculationArea);
-    console.log("The datatype is: " + typeof calculationArea);
+    try{
+        calculationArea = document.getElementById("calculationArea").innerHTML = buttonOne;
+        console.log("When the user clicks 1: " + calculationArea);
+        console.log("The datatype is: " + typeof calculationArea);
+    }
+    catch(error) {
+        console.error(error);
+    }
+    
+
 }
 document.getElementById("0").onclick = function(){
-    calculationArea = document.getElementById("calculationArea").innerHTML = buttonOne;
-    console.log("When the user clicks 0: " + calculationArea);
-    console.log("The datatype is: " + typeof calculationArea);
+    try{
+        calculationArea = document.getElementById("calculationArea").innerHTML = buttonOne;
+        console.log("When the user clicks 0: " + calculationArea);
+        console.log("The datatype is: " + typeof calculationArea);
+    }
+    catch(error) {
+        console.error(error);
+    }
+    
 }
+
