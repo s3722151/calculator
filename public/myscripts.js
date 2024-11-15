@@ -63,7 +63,9 @@ document.getElementById("backspace").onclick = function(){
             console.log("The datatype of returnBackSpace is: " + typeof returnBackSpace);
             let returnBackSpace2 = Number(returnBackSpace);
             calculationArea = document.getElementById("calculationArea").innerHTML = returnBackSpace2;
-        }      
+        }
+        //If there is a decimal E.g. 9.0
+
     }
     catch(error) {
         console.error(error);
@@ -109,7 +111,9 @@ document.getElementById("+").onclick = function(){
 }
 document.getElementById(".").onclick = function(){
     try{
-        calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+        let decimalPointCheckInitialValue = document.getElementById("calculationArea").innerHTML;
+        initialValue = document.getElementById("initialValue").innerHTML =  decimalPointCheckInitialValue + " " +  buttonDecimal;
+        decimalCheck = true;
     }    
     catch(error) {
         console.error(error);
@@ -117,7 +121,10 @@ document.getElementById(".").onclick = function(){
 }
 document.getElementById("/").onclick = function(){
     try{
-        calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+        let divideCheckInitialValue = document.getElementById("calculationArea").innerHTML;
+        console.log("The value of divideCheckInitialValue :" + divideCheckInitialValue );
+        initialValue = document.getElementById("initialValue").innerHTML =  divideCheckInitialValue + " " + buttonDivide;
+        divideCheck = true;
     }    
     catch(error) {
         console.error(error);
@@ -125,7 +132,35 @@ document.getElementById("/").onclick = function(){
 }
 document.getElementById("=").onclick = function(){
     try{
-        calculationArea = document.getElementById("calculationArea").innerHTML = 0 ; // Need to find a way to backspace
+        if (multiplyCheck){
+            initialValue = document.getElementById("initialValue").innerHTML = "";
+            calculationArea = document.getElementById("calculationArea").innerHTML *= buttonNine;
+            multiplyCheck = false;
+        }
+        if (minusCheck){
+            initialValue = document.getElementById("initialValue").innerHTML = "";
+            calculationArea = document.getElementById("calculationArea").innerHTML -= buttonNine;
+            minusCheck = false;
+        } 
+        if (plusCheck) {
+            // Clear the initial value if needed
+            document.getElementById("initialValue").innerHTML = "";    
+            // Convert the content of 'calculationArea' to an integer
+            let plusConverter = parseInt(document.getElementById("calculationArea").innerHTML, 10);    
+            // Ensure buttonNine is treated as a number by using parseInt or Number
+            let numericButtonNine = parseInt(buttonNine, 10);    
+            // Add the values together (both should now be numbers)
+            let result = plusConverter + numericButtonNine;    
+            // Update the 'calculationArea' with the result (as a string for display)
+            document.getElementById("calculationArea").innerHTML = result.toString();    
+            // Set plusCheck to false to prevent further execution
+            plusCheck = false;
+        }
+        if (divideCheck){
+            initialValue = document.getElementById("initialValue").innerHTML = "";
+            calculationArea = document.getElementById("calculationArea").innerHTML /= buttonNine;
+            divideCheck = false;
+        }  
     }
     catch(error) {
         console.error(error);
@@ -135,38 +170,30 @@ document.getElementById("=").onclick = function(){
 
 document.getElementById("9").onclick = function(){
     try{
-    if (!multiplyCheck && !minusCheck && !plusCheck){
-        calculationArea = document.getElementById("calculationArea").innerHTML = buttonNine;
+    if (!multiplyCheck && !minusCheck && !plusCheck && !decimalCheck && !divideCheck && !equalCheck){
+        calculationArea = document.getElementById("calculationArea").innerHTML += buttonNine;
     }
     console.log("When the user clicks 9: " + calculationArea);
     console.log("The datatype is: " + typeof calculationArea); //Shoud be a string
-    if (multiplyCheck){
-        initialValue = document.getElementById("initialValue").innerHTML = "";
-        calculationArea = document.getElementById("calculationArea").innerHTML *= buttonNine;
-        multiplyCheck = false;
-    }
-    if (minusCheck){
-        initialValue = document.getElementById("initialValue").innerHTML = "";
-        calculationArea = document.getElementById("calculationArea").innerHTML -= buttonNine;
-        minusCheck = false;
-    } 
-    if (plusCheck) {
-        // Clear the initial value if needed
-        document.getElementById("initialValue").innerHTML = "";    
-        // Convert the content of 'calculationArea' to an integer
-        let plusConverter = parseInt(document.getElementById("calculationArea").innerHTML, 10);    
-        // Ensure buttonNine is treated as a number by using parseInt or Number
-        let numericButtonNine = parseInt(buttonNine, 10);    
-        // Add the values together (both should now be numbers)
-        let result = plusConverter + numericButtonNine;    
-        // Update the 'calculationArea' with the result (as a string for display)
-        document.getElementById("calculationArea").innerHTML = result.toString();    
-        // Set plusCheck to false to prevent further execution
-        plusCheck = false;
-    }
-    
-    
 
+    //Code to ensure that inital value is read 
+    if(multiplyCheck){
+        let firstValueMultiplied = document.getElementById("initialValue").innerHTML;
+        initialValue = document.getElementById("initialValue").innerHTML = firstValueMultiplied + buttonNine;
+    }
+
+    if(minusCheck){
+        let firstValueMinus = document.getElementById("initialValue").innerHTML;
+        initialValue = document.getElementById("initialValue").innerHTML = firstValueMinus + buttonNine;
+    }
+    if(plusCheck){
+        let firstValuePlus = document.getElementById("initialValue").innerHTML;
+        initialValue = document.getElementById("initialValue").innerHTML = firstValuePlus +"-" + buttonNine;
+    }
+    if(divideCheck){
+        let firstValueDivide = document.getElementById("initialValue").innerHTML;
+        initialValue = document.getElementById("initialValue").innerHTML = firstValueDivide + buttonNine;
+    }
     }
     catch(error) {
         console.error(error);
