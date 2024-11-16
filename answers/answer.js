@@ -1,3 +1,9 @@
+//Inspired from this and prompted
+// https://www.youtube.com/watch?v=I5kj-YsmWjM
+
+//Redo: https://www.w3schools.com/jsref/event_onclick.asp
+//https://www.w3schools.com/js/tryit.asp?filename=tryjs_functions
+
 document.addEventListener("DOMContentLoaded", () => {
     const calculationArea = document.getElementById("calculationArea");
     let currentInput = ""; // Tracks the current input shown on the screen
