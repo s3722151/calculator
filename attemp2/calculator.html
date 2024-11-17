@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>My Calculator</header>
+    <section class="calculatorBody">
+        <!-- Row 1-->
+        <div class="row">        
+            <button class ="button" id="clear">Clear</button>
+            <button class ="button" id="backspace">Backspace</button>
+            <div class="calculationArea">
+                <div class="" id="initialValue"></div>
+                <div class="" id="calculationArea"></div>
+            </div>
+
+        </div>
+         <!-- Row 2-->
+        <div class="row">
+            <button class="button" id="7" value="7" onclick="valueToCalculationArea('7')">7</button>
+            <button class ="button" id="8" value=8  onclick="valueToCalculationArea('8')">8</button>
+            <button class ="button"id="9" value=9 onclick="valueToCalculationArea('9')">9</button>
+            <button class="button" id="*" value="*" onclick="valueToCalculationArea('*')">*</button>
+        </div>
+         <!-- Row 3-->
+        <div class="row">
+            <button class ="button" id="4"value=4 onclick="valueToCalculationArea('4')">4</button>
+            <button class ="button" id="5"value=5 onclick="valueToCalculationArea('5')">5</button>
+            <button class ="button" id="6"value=6 onclick="valueToCalculationArea('6')">6</button>
+            <button class="button" id="-" value="-" onclick="valueToCalculationArea('-')">-</button>
+        </div>
+         <!-- Row 4-->
+        <div class="row">
+            <button class ="button" id="1"value=1 onclick="valueToCalculationArea('1')">1</bconutton>
+            <button class ="button" id="2"value=2 onclick="valueToCalculationArea('2')">2</button>
+            <button class ="button" id="3"value=3 onclick="valueToCalculationArea('3')">3</button>
+            <button class ="button" id="+" value =+ onclick="valueToCalculationArea('+')"> + </button>
+        </div>
+         <!-- Row 5-->
+        <div class="row">
+            <button class ="button" id="0" value=0 onclick="valueToCalculationArea('0')"> 0 </button>
+            <button class ="button" id="." value="." onclick="valueToCalculationArea('.')"> . </button>
+            <button class ="button" id="/" value ="/" onclick="valueToCalculationArea('/')"> / </button>
+            <button class ="button" id="=" onclick="equalCalculation()"> = </button>
+        </div>    
+    </section>
+
+    <!-- https://www.w3schools.com/tags/att_script_src.asp  -->
+    <script src="myscripts.js"></script>
+    <!-- <script src="test.js"></script> -->
+
+</body>
+</html>

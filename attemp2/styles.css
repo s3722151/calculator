@@ -1,0 +1,251 @@
+/* This is my code */
+/* header{
+    color:black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-weight: 900;
+    width:100%;
+    font-size:  50px;
+
+}
+
+.calculatorBody{
+    background-color: green;
+    font-weight: 900; 
+    width: 100%;
+    border-radius: 5px;
+    height:40em;
+}
+
+
+.row{
+    background-color:grey;
+    margin:0em;
+    width:auto;
+    height:auto;
+}
+
+.button {
+    height: auto;
+    width:24%;
+    font-size: auto;
+    font-weight: 990;
+    border-radius: 5px;
+    display:inline-block;
+} */
+/* When you hover over the button: 
+https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_group
+*/ 
+
+/* button:hover {
+    background-color: #3e8e41;
+  }
+
+.calculationArea{
+    height: auto;
+    width:49%;
+    font-size: auto;
+    font-weight: 990;
+    border-radius: 5px;
+    text-align: center;
+    display:inline-block;
+    border: 10ch;
+} */
+
+
+/*https://www.w3schools.com/css/tryit.asp?filename=trycss_website_layout_blog*/
+/* @media screen and (min-width: 400px) {
+
+    .row{
+        width:auto;
+        height:7em;
+    }
+    .button {
+        height: inherit;
+        width:24%;
+        font-size: auto;
+    }
+
+    .calculationArea{
+        width:42%;
+        padding:0px,0px,10px,0px;
+        height: 2.9em;
+    }
+   }
+
+
+@media screen and (min-width: 500px) {
+    .row{
+        width:auto;
+        height:7em;
+    }
+   .calculationArea{
+        width:45%;
+        height: 3em;
+    }
+  }
+
+@media screen and (min-width: 600px) {
+    .button {   
+        height: 100px;
+    }
+    .calculationArea{
+        width:45%;
+        height:3em;
+    }
+
+  }
+
+  @media screen and (min-width: 680px) {
+    .button {   
+        height: 100px;
+        font-size: 20px;
+    }
+  }
+
+@media screen and (min-width: 1200px) {
+    .button {   
+        height: 120px;
+        font-size: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1500px) {
+    .button {   
+        height: 120px;
+        font-size: 30px;
+    }
+  }
+ */
+
+
+
+
+ /* Improved css  with gpt
+  - Rounded Edges 
+  - Flex*/
+
+  /* General Styles */
+header {
+    color: black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    width: 100%;
+    font-size: 50px;
+    margin-bottom: 1em;
+}
+
+.calculatorBody {
+    background-color: #2e8b57; /* Softer green for better readability */
+    font-weight: 900;
+    width: 100%;
+    border-radius: 10px; /* More defined rounding */
+    height: 40em;
+    padding: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.row {
+    display: flex; /* Better alignment for buttons */
+    justify-content: center;
+    gap: 0.5em;
+    margin: 0.5em 0;
+    width: 100%;
+}
+
+.button {
+    height: auto;
+    width: 22%; /* Adjusted width for cleaner alignment */
+    font-size: 16px; /* Set base font size for buttons */
+    font-weight: bold;
+    border-radius: 12px; /* More defined rounding */
+    display: inline-block;
+    border: none;
+    background-color: #4caf50; /* Standard green button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover Effect */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Active State */
+button:active {
+    background-color: #367d39; /* Darker green for active state */
+    transform: scale(0.95); /* Slight scale down for click feedback */
+}
+
+/* Calculation Area */
+.calculationArea {
+    width: 40%; /* Maintain width for a centered and spacious display */
+    padding: 0.5em;
+    height: 3em;
+    font-size: 18px; /* Set readable font size */
+    font-weight: bold;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    border: 2px solid #aaa; /* Subtle gray border for contrast */
+    margin: 0 auto 1em auto; /* Centered and with spacing */
+    background-color: #f9f9f9; /* Light gray background for contrast */
+    color: black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -1px 0 2px rgba(0, 0, 0, 0.1); /* Offset shadows to show right and bottom edges */
+}
+
+/* Responsive Design */
+@media screen and (min-width: 400px) {
+    .row {
+        gap: 0.4em;
+    }
+    .button {
+        font-size: 14px;
+    }
+    .calculationArea {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .calculationArea {
+        font-size: 18px;
+        height: 3.5em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .button {
+        height: 80px;
+        font-size: 18px;
+    }
+    .calculationArea {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .button {
+        height: 90px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .button {
+        height: 110px;
+        font-size: 24px;
+    }
+    .calculationArea {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .button {
+        height: 120px;
+        font-size: 26px;
+    }
+}
