@@ -37,7 +37,7 @@ let buttonOne = document.getElementById("1").value;
 document.getElementById("clear").onclick = function(){
     try {
     //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_innerhtml_p
-    calculationArea = document.getElementById("calculationArea").innerHTML = 0;
+    calculationArea = document.getElementById("calculationArea").innerHTML = "";
     initialValue = document.getElementById("initialValue").innerHTML = "";
     }
     catch(error) {
@@ -53,7 +53,7 @@ document.getElementById("backspace").onclick = function(){
         let backSpaceCheck = backSpaceConvertToString.length;
         //If calculationArea is length is 1 && greater than 0 , make it zero
         if (backSpaceCheck == 1 || backSpaceCheck == 0 ){
-            calculationArea = document.getElementById("calculationArea").innerHTML = 0;
+            calculationArea = document.getElementById("calculationArea").innerHTML = "";
         }      
         //If calculationArea is length is greater than 1, remove the last digit
         if (backSpaceCheck >1 ){
